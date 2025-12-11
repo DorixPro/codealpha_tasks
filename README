@@ -1,0 +1,153 @@
+# CodeAlpha Cyber Security Internship  
+## Task 1: Advanced Network Packet Sniffer (Python + Scapy)
+
+This project is developed as part of the **CodeAlpha Cyber Security Internship Program**.  
+The task focuses on building an **intermediate-level network packet sniffer** capable of analyzing live network traffic at multiple protocol layers.
+
+This tool provides detailed inspection of Ethernet, IP, TCP, UDP, and ICMP packets using the Scapy library.
+
+---
+
+## 📌 Features
+
+### ✅ Layer-Wise Packet Analysis  
+- Ethernet Layer  
+- IP Layer  
+- TCP/UDP Layer  
+- ICMP Layer  
+
+### ✅ Displays Critical Information  
+- Source & Destination IP  
+- Source & Destination MAC Addresses  
+- Protocol Information (TCP/UDP/ICMP/Other)  
+- TTL (Time to Live)  
+- Fragment Offset  
+- Flags  
+- Packet Length  
+- Timestamp  
+- Payload Contents  
+
+### ✅ Advanced TCP/UDP/ICMP Insights  
+- TCP sequence & acknowledgment numbers  
+- TCP flags  
+- UDP source/destination ports  
+- ICMP type & code  
+- Raw payload extraction  
+
+### ✅ Real-Time Sniffing  
+Uses Scapy's `sniff()` function to capture packets continuously.
+
+---
+
+## 🧪 Example Output
+
+```
+Time: 1731665565.9123, Source IP: 192.168.1.6, Destination IP: 142.251.36.14, Protocol: 6, Length: 74
+    TTL: 117, Flags: DF, Fragment Offset: 0
+    Source MAC: 00:1a:2b:3c:4d:5e, Destination MAC: 78:11:dc:98:73:b4
+    TCP Source Port: 42892, Destination Port: 443
+    Sequence Number: 45109218, Acknowledgment Number: 18392014, Flags: PA
+    Payload: Raw load
+```
+
+---
+
+## 📦 Installation
+
+### Step 1 — Create Virtual Environment (recommended)
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### Step 2 — Install Scapy
+```bash
+pip install scapy
+```
+
+---
+
+## ▶️ Usage
+
+To run the sniffer:
+
+```bash
+sudo python3 sniffer.py
+```
+
+(Administrator privileges are required to capture packets.)
+
+---
+
+## 🧠 How It Works
+
+The script uses Scapy to filter packets and extract:
+
+### 🔹 **Ethernet Layer**
+- Source MAC  
+- Destination MAC  
+
+### 🔹 **IP Layer**
+- Source IP  
+- Destination IP  
+- TTL  
+- Protocol  
+- Fragmentation details  
+
+### 🔹 **TCP Layer**
+- Source/Destination ports  
+- Sequence & ACK numbers  
+- Flags  
+- TCP payload  
+
+### 🔹 **UDP Layer**
+- Source/Destination ports  
+- UDP payload  
+
+### 🔹 **ICMP Layer**
+- Type  
+- Code  
+- Payload  
+
+Each packet triggers a callback function which prints all extracted details in a structured format.
+
+---
+
+## 🧰 File Structure
+
+```
+CodeAlpha_Task/
+│── sniffer.py
+│── README.md
+│── captured_packets.json   (Optional - if logging added)
+└── screenshots/            (Add output screenshots for submission)
+```
+
+---
+
+## 📚 Technologies Used
+- **Python 3**
+- **Scapy Networking Library**
+- **Linux/Kali Environment**
+
+---
+
+## 🎯 Conclusion
+
+This project demonstrates strong understanding of:
+
+- Packet structures  
+- Network protocols  
+- Traffic analysis  
+- Scapy capabilities  
+- Real-time monitoring  
+
+It fulfills all CodeAlpha Task 1 requirements for **Network Sniffer**.
+
+---
+
+## 👨‍💻 Author
+**Rahul Choudhary**  
+CodeAlpha Cyber Security Intern  
+GitHub: (your link here)
+
